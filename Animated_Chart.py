@@ -26,7 +26,7 @@ def split_bars(bars):
     return max_heights, start_heights, colors
 
 
-def bar_cart(bars, title, x_labels, y_labels, total_frames=1800, fps=60,
+def bar_chart(bars, title, x_labels, y_labels, total_frames=1800, fps=60,
              save=False, show=True):
     Y_axis_scaling = 1.1
     max_heights, start_heights, colors = split_bars(bars)
@@ -174,10 +174,11 @@ cost_maintenance_start_value_bars = (tesla_m_s_j, bmw_m_s_j, e_smart_m_s_j,
                                      white_bar,
                                      hvv_2_seme_s, hvv_abo_ab_s, hvv_abo_ae_s)
 
-bar_cart(cost_bars, title='Jährliche Fahrtkosten',
-         x_labels=('', 'Strecke 1', '', '', '', 'Strecke 2', '', '',
-                   '', 'Strecke 3', '', '', 'Student', '\nAB', '\nA-E'),
-         y_labels=(''), save=True, show=False)
+if __name__ == '__main__':
+    bar_chart(cost_bars, title='Jährliche Fahrtkosten',
+              x_labels=('', 'Strecke 1', '', '', '', 'Strecke 2', '', '',
+                        '', 'Strecke 3', '', '', 'Student', '\nAB', '\nA-E'),
+              y_labels=(''), save=True, show=False)
 
 """
 Copyright 2020 Nico Schaefer
